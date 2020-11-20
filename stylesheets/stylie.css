@@ -53,40 +53,45 @@ body {
     border: 5px solid black;
     display: grid;
     justify-content: center;
-    grid-template-columns: 75px 75px 100px 100px 75px 75px;
-    grid-template-rows: 220px auto 100px;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: 100px 300px;
     grid-template-areas: 
         "header header header header header header"
-        "left left middle middle right right"
-        "footer footer footer footer footer footer";
+        "middle middle middle middle middle middle";
     background-color: #964;
 }
 
 header {
     border: 5px solid green;
     grid-area: header;
+    display: flex;
+    width: auto;
+    flex-flow: column nowrap;
 }
-
-nav {
-    border: 5px solid blue;
-    grid-area: left;
-}
+    header span {
+        text-align: center;
+        padding: 5px;
+    }
+    #reset {
+        flex-wrap: ;
+    }
 
 section {
     border: 5px solid red;
     grid-area: middle;
+    display:flex;
 }
 
     article {
-        border: 5px solid violet;
+        border: 5px solid violet; 
     }
-
-aside{
-    border: 5px solid orange;
-    grid-area: right;
-}
-
-footer{
-    border: 5px solid brown;
-    grid-area: footer;
-}
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+    }
+        #box {
+            display: block;
+            height: 25px;
+            width: 25px;
+            background-color: black;
+        }
