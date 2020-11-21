@@ -51,18 +51,14 @@ table {
 
 body {
     border: 5px solid black;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 150px 150px;
-    grid-template-rows: 100px 300px;
-    grid-template-areas: 
-        "header header header header header header"
-        "middle middle middle middle middle middle";
-    background-color: #964;
+    background-color: #214248;
 }
 
 header {
-    border: 5px solid green;
+    color: #00002a;
+    font-weight: 550;
+    font-size: 28px;
+    border: 5px solid #5e969c;
     grid-area: header;
     display: flex;
     width: auto;
@@ -72,26 +68,35 @@ header {
         text-align: center;
         padding: 5px;
     }
-    #reset {
-        flex-wrap: ;
+    button {
+        background-color: #abb9d0;
     }
 
 section {
-    border: 5px solid red;
-    grid-area: middle;
-    display:flex;
+    border: 5px solid #426268;
+    display: flex;
+    justify-content: center;;
 }
 
     article {
-        border: 5px solid violet; 
+        border: 5px solid #5d8b91; 
+        flex-basis: 289px;
+        height:289px;
+        background-color: #112228;
     }
     .container {
         display: flex;
         flex-flow: row wrap;
+        
     }
-        #box {
+        .box {
             display: block;
-            height: 25px;
-            width: 25px;
+            height: 18px;
+            width: 18px;
             background-color: black;
+            transition: 0s 180s;
+        }
+        .box:hover {
+            background-color: red;
+            transition: 0s;
         }

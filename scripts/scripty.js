@@ -1,25 +1,35 @@
-const resetbtn = document.querySelector('#reset')
+const resetBtn = document.querySelector('#reset')
 const box16 = document.querySelector('#b16')
-const singleBox = document.querySelector('#box')
+const singleBox = document.querySelector('.box')
+const clear = document.getElementsByClassName('box');
+const container = document.querySelector('.container');
 
 function colorChanger(color) {
     singleBox.style.backgroundColor = `${color}`;
 }
 
+function clearArea() {
+    container.innerHTML = '';
+}
+
 function createBox(nmbr) {
     for (let i = 1; i <= nmbr; i++) {
-        let container = document.querySelector('.container');
         let divBox = document.createElement('div');
-        let selector = document.createAttribute('id');
-        selector.value = 'box';
-        divBox.setAttributeNode(selector);
+        divBox.setAttribute('class', 'box');
         container.appendChild(divBox);
+        resetBtn.innerHTML = 'Reset';
     }
 }
 
-box16.addEventListener('click', () => {
+resetBtn.addEventListener('click', () => {
+    clearArea();
     createBox(256);
-});
+})
+box16.addEventListener('click', () => {
+    clearArea();
+    createBox(256);
+})
+
 if (singleBox) {
     singleBox.addEventListener('mouseover', () => {
         colorChanger(red);
